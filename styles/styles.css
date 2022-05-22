@@ -4,11 +4,16 @@
     --main-text-color: #757575;
     --second-text-color: #ffffff;
     --accent-color: #2196F3;
+    --background-color: #2F303A;
+    --background-section-color: #ffffff;
+    --background-button: #188CE8;
+    --color-logo: #000000;
+    --background-section-employees: #F5F4FA;
 }
 
 body {
     font-family: "Roboto", sans-serif;
-    color: #212121;
+    color: var(--main-title-color);
 }
 
 .list {
@@ -33,12 +38,13 @@ body {
 }
 
 .btn{
+    font-family: inherit;
     cursor: pointer;
 }
 
 /* --------------------------HEADER-------------------------- */
 .header{
-    background-color: #ffffff;
+    background-color: var(--background-section-color);
 }
 
 .header-nav {}
@@ -60,7 +66,7 @@ body {
     font-size: 26px;
     line-height: calc(31/26);
     letter-spacing: 0.03em;
-    color: #000000;
+    color: var(--color-logo);
 }
 
 .header-list {}
@@ -111,7 +117,7 @@ body {
  /* --------------------------HERO-------------------------- */
  
 .hero {
-    background: #2F303A;
+    background: var(--background-color);
 }
 
 .hero-title {
@@ -141,9 +147,11 @@ body {
     cursor: pointer;
 }
 
-.btn {
-    font-family: inherit;
-
+.hero-btn:hover,
+.hero-btn:focus{
+    background: var(--background-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
  /* --------------------------SPECIFIC-------------------------- */
@@ -194,7 +202,9 @@ body {
 
  /* --------------------------EMPLOYEES-------------------------- */
 
-.employees {}
+.employees {
+    background: var(--background-section-employees);
+}
 
 .employees-title {}
 
@@ -202,7 +212,11 @@ body {
 
 .employees-list {}
 
-.employees-item {}
+.employees-item {
+    background: var(--background-section-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 
 .employees-item-title {
     font-weight: 500;
@@ -224,7 +238,7 @@ body {
  /* --------------------------FOOTER-------------------------- */
 
 .footer {
-    background: #2F303A;
+    background: var(--background-color);
 }
 
 .footer-logo {
@@ -246,22 +260,22 @@ body {
     color: var(--second-title-color);
 }
 
-.contacts-address{}
+.contacts-address{
+    font-style: normal;
+}
 
 .footer-list {}
 
 .footer-item {}
 
 .footer-link {
-    font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--second-text-color);
 }
 
 .footer-mail {
-    font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -269,7 +283,6 @@ body {
 }
 
 .footer-tel {
-    font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -302,7 +315,7 @@ body {
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
-    background: #2196F3;
+    background: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     color: var(--second-title-color);
